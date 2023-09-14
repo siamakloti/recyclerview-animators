@@ -25,6 +25,7 @@ open class AlphaInAnimationAdapter @JvmOverloads constructor(
   private val from: Float = DEFAULT_ALPHA_FROM
 ) : AnimationAdapter(adapter) {
 
+  // get Animators by view
   override fun getAnimators(view: View): Array<Animator> =
     arrayOf(ObjectAnimator.ofFloat(view, "alpha", from, 1f))
 
